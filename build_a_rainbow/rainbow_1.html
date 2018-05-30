@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Build a rainbow</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1><center>Colours of the rainbow</center></h1>
+      <p><center>CLICK ON THE COLOURS!</center></p>
+
+      <!--all the divs representing each color inside the container -->
+      <div id="red"><center>Red</center></button>
+      </div>
+
+      <br>
+
+      <div id="orange"><center>Orange</center></div>
+
+      <br>
+
+      <div id="yellow"><center>Yellow</center></div>
+
+      <br>
+
+      <div id="green"><center>Green</center></div>
+
+      <br>
+
+      <div id="blue"><center>Blue</center></div>
+
+      <br>
+
+      <div id="purple"><center>Purple</center></div>
+
+      <br>
+
+      <div id="pink"><center>Pink</center></div>
+
+    </div>
+
+    <script type="text/javascript">
+
+    // an array containing all the rainbow colors
+    var rainbow = [
+      "red", "orange", "yellow", "green", "blue", "purple", "pink"
+    ];
+
+    let red =  document.getElementById("red");
+    let orange =  document.getElementById("orange");
+    let yellow =  document.getElementById("yellow");
+    let green =  document.getElementById("green");
+    let blue =  document.getElementById("blue");
+    let purple =  document.getElementById("purple");
+    let pink =  document.getElementById("pink");
+
+
+// when the mouse clicks on the div, this performs the function that changes the background color
+    red.onclick = function() {
+      red.style.backgroundColor="red";
+      red.style.height="100px";
+    }
+
+    orange.onclick = function(){
+      orange.style.backgroundColor="orange";
+      orange.style.height="100px";
+    }
+
+    yellow.onclick = function(){
+      yellow.style.backgroundColor="yellow";
+      yellow.style.height="100px";
+    }
+
+    green.onclick = function(){
+      green.style.backgroundColor="green";
+      green.style.height="100px";
+    }
+
+    blue.onclick = function(){
+      blue.style.backgroundColor="blue";
+      blue.style.height="100px";
+    }
+
+    purple.onclick = function(){
+      purple.style.background="purple";
+      purple.style.height="100px";
+    }
+
+    pink.onclick = function(){
+      pink.style.backgroundColor="pink";
+      pink.style.height="100px";
+    }
+    </script>
+  </body>
+</html>
