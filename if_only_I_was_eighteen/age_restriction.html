@@ -2,28 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Age Restricction</title>
+    <title>Age Restriction</title>
   </head>
   <body>
-    <div class="">
-      <input type="number" name="age" id="age">
-      <div id="display"></div>
-      <button type="button" name="button">PG 13</button>
-    </div>
 
     <script type="text/javascript">
-      var age = document.getElementById("age");
-      var check;
-      var button = document.getElementsByName('button');
+    var name = window.prompt("Please enter your name")
+    var ageCheck = window.prompt("Please enter your age")
 
-      button.onclick = function (){
-        check = age.value;
-        if (check < 13) {
-          document.getElementById('display').innerHTML = "You are too young to participate";
-        }
-      }
+    if (ageCheck < 18) {
+      // window.alert("You submitted that you are" ageCheck + ":years old" + name + ".");
+      window.alert("You must be at least 18 years old to visit this site");
+    }
 
+    else if (ageCheck > 18 && ageCheck < 100) {
+      window.alert("You have submitted your details");
+      window.alert("Welcome " + name + ".");
+    }
 
+    else {
+      window.alert("Your age is in vain! Jesus won't let you live that long :)");
+    }
     </script>
   </body>
 </html>
