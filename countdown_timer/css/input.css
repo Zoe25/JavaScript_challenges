@@ -1,0 +1,29 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  background-image: url(../images/weed.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white; }
+
+#birthday {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 7; }
+
+h1 {
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  font-size: 80px; }
+
+h2 {
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 5; }
+
+/*# sourceMappingURL=input.css.map */

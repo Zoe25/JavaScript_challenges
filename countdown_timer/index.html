@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="css/input.css">
+  </head>
+  <body>
+    <h1>Birthday Countdown</h1>
+    <h2>August 6th,2018</h2>
+    <p id="birthday"></p>
+    <!-- <span id="day">00</span>
+    <span id="hour">00</span>
+    <span id="minute">00</span>
+    <span id="second">00</span> -->
+
+    <script type="text/javascript">
+      // Setting the Birhday date
+      var countDownDate =  new Date("Aug 6, 2018  00:00:00").getTime();
+
+      // countdown will run every second
+      var countUpDate = setInterval (function(){
+
+        // this is how we get the present date and timeout
+        var now = new Date().getTime();
+
+        // finding the remaining(difference) days and time between the present date and birthday date
+        // we do this by finding the difference using the variable names
+        var remainingTime = countDownDate /*birthday variable name */ - now; /*present date varaibale name*/
+
+        // calculating the remaining time till the birthday Date i.e days,hours,minutes and Seconds
+        var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24))/ (1000 * 60 * 60));
+        var minutes = Math.floor((remainingTime % (1000 * 60 * 60))/ (1000 * 60));
+        var seconds = Math.floor((remainingTime % (1000 * 60))/ (1000));
+
+        // now we put the result of our calculations in the html element
+        document.getElementById("birthday").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "S ";
+
+        // once the birthday date is reached,a message will show
+        if (remainingTime < 0){
+          clearInterval(countUpDate);
+          document.getElementById("birthday").innerHTML = "HAPPPY BIRTHDAY!";
+        }
+      }
+
+      // this executes in milliseconds by when the timer should start
+      ,1000);
+    </script>
+  </body>
+</html>
