@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Build a Rainbow 2.0</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="red">Red</div>
+      <div id="orange">Orange</div>
+      <div id="yellow">Yellow</div>
+      <div id="green">Green</div>
+      <div id="blue">Blue</div>
+      <div id="purple">Purple</div>
+      <div id="violet">Violet</div>
+    </div>
+
+    <script type="text/javascript">
+      //code for array containing the rainbow colors
+      var rainbow = ["red", "orange", "yellow" , "green", "blue", "purple", "violet"]
+
+      //code for for loop
+      for (let index = 0; index < rainbow.length; index++){
+        var color = document.getElementById(rainbow[index] + '')  //assigning the variable color to the rainbow index
+        color.style.backgroundColor=rainbow[index]; //code that will style each div their own background color
+      }
+    </script>
+  </body>
+</html>
